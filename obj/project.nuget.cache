@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "mItDHEaoOZHulkYq5bnsr+q9f6jz7x+dYPufFDAATG6+2pZHB1+UVh0YOy+fJwq8f6lYWQ7z1v4CaNx0ALTK/w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sebastiao.filho\\OneDrive - SENAC-SC\\c#-nova\\MVC_FORM\\MVC_FORM.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sebastiao.filho\\.nuget\\packages\\mysqlconnector\\2.2.5\\mysqlconnector.2.2.5.nupkg.sha512"
+  ],
+  "logs": []
+}

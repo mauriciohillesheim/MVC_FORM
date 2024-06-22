@@ -1,0 +1,17 @@
+C:\Users\sebastiao.filho\OneDrive - SENAC-SC\c#-nova\MVC_FORM\bin\Debug\net8.0-windows\MVC_FORM.exe
+C:\Users\sebastiao.filho\OneDrive - SENAC-SC\c#-nova\MVC_FORM\bin\Debug\net8.0-windows\MVC_FORM.deps.json
+C:\Users\sebastiao.filho\OneDrive - SENAC-SC\c#-nova\MVC_FORM\bin\Debug\net8.0-windows\MVC_FORM.runtimeconfig.json
+C:\Users\sebastiao.filho\OneDrive - SENAC-SC\c#-nova\MVC_FORM\bin\Debug\net8.0-windows\MVC_FORM.dll
+C:\Users\sebastiao.filho\OneDrive - SENAC-SC\c#-nova\MVC_FORM\bin\Debug\net8.0-windows\MVC_FORM.pdb
+C:\Users\sebastiao.filho\OneDrive - SENAC-SC\c#-nova\MVC_FORM\obj\Debug\net8.0-windows\MVC_FORM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sebastiao.filho\OneDrive - SENAC-SC\c#-nova\MVC_FORM\obj\Debug\net8.0-windows\MVC_FORM.AssemblyInfoInputs.cache
+C:\Users\sebastiao.filho\OneDrive - SENAC-SC\c#-nova\MVC_FORM\obj\Debug\net8.0-windows\MVC_FORM.AssemblyInfo.cs
+C:\Users\sebastiao.filho\OneDrive - SENAC-SC\c#-nova\MVC_FORM\obj\Debug\net8.0-windows\MVC_FORM.csproj.CoreCompileInputs.cache
+C:\Users\sebastiao.filho\OneDrive - SENAC-SC\c#-nova\MVC_FORM\obj\Debug\net8.0-windows\MVC_FORM.dll
+C:\Users\sebastiao.filho\OneDrive - SENAC-SC\c#-nova\MVC_FORM\obj\Debug\net8.0-windows\refint\MVC_FORM.dll
+C:\Users\sebastiao.filho\OneDrive - SENAC-SC\c#-nova\MVC_FORM\obj\Debug\net8.0-windows\MVC_FORM.pdb
+C:\Users\sebastiao.filho\OneDrive - SENAC-SC\c#-nova\MVC_FORM\obj\Debug\net8.0-windows\MVC_FORM.genruntimeconfig.cache
+C:\Users\sebastiao.filho\OneDrive - SENAC-SC\c#-nova\MVC_FORM\obj\Debug\net8.0-windows\ref\MVC_FORM.dll
+C:\Users\sebastiao.filho\OneDrive - SENAC-SC\c#-nova\MVC_FORM\bin\Debug\net8.0-windows\MySqlConnector.dll
+C:\Users\sebastiao.filho\OneDrive - SENAC-SC\c#-nova\MVC_FORM\obj\Debug\net8.0-windows\MVC_FORM.csproj.AssemblyReference.cache
+C:\Users\sebastiao.filho\OneDrive - SENAC-SC\c#-nova\MVC_FORM\obj\Debug\net8.0-windows\MVC_FORM.csproj.Up2Date
