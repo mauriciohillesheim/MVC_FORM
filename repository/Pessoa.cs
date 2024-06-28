@@ -109,6 +109,39 @@ namespace repository
             CloseConexao();
         }
 
+        public static void UpdatePessoa(
+            int indice,
+            string nome,
+            int idade,
+            string cpf
+        ){
+            InitConexao();
+            MessageBox.Show("iniciando");
+            string query = "UPDATE pessoas SET nome = @Nome, idade = @Idade, cpf = @Cpf WHERE id = @Id";
+            MySqlCommand command = new MySqlCommand(query, conexao);
+            Pessoa pessoa = pessoas[indice];
+            
+            if(nome != null || idade > 0 || cpf != null) {
+                command.Parameters.AddWithValue("@Id", pessoa.Id);
+                command.Parameters.AddWithValue("@Nome", nome);
+                command.Parameters.AddWithValue("@Cpf", cpf);
+                command.Parameters.AddWithValue("@Idade", idade);
+                int rowsAffected = command.ExecuteNonQuery();
+            
+                if (rowsAffected > 0) {
+                    pessoa.Nome = nome;
+                    pessoa.Idade = idade;
+                    pessoa.Cpf = cpf;
+                }
+                else {
+                    MessageBox.Show(rowsAffected.ToString());
+                }
+            }else {
+                MessageBox.Show("Usuário não encontrado");
+            }
+            CloseConexao();
+        }
+        
         public static void Delete(int index) {
             InitConexao();
             string delete = "DELETE FROM pessoas WHERE id = @Id";
@@ -124,7 +157,5 @@ namespace repository
             }
             CloseConexao();
         }
-
     }
-
 }
