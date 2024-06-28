@@ -85,6 +85,7 @@ public class ViewPessoa : Form
         Controls.Add(BtnAlterar);
         Controls.Add(BtnDeletar);
         Controls.Add(DgvListagem);
+        Listar();
     }
 
     private void Listar() {

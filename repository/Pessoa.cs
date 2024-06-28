@@ -25,7 +25,7 @@ namespace repository
             conexao.Close();
         }
 
-        public static List<Pessoa> Sincronizar() {
+        public static void Sincronizar() {
             // inicializa a conexão com o banco
             InitConexao();
             string query = "SELECT * FROM pessoas";
@@ -41,16 +41,16 @@ namespace repository
             }
             // fcha a conexão com o banco
             CloseConexao();
-            return pessoas;
+            
         }
 
         public static void Criar(Pessoa pessoa) {
             InitConexao();
-            string insert = "INSERT INTO pessoas (nome, idade, cpf) VALUES (@Nome, @Idade, @Cpf)";
-            MySqlCommand command = new MySqlCommand(insert, conexao);
+            string criar = "INSERT INTO pessoas (nome, idade, cpf) VALUES (@Nome, @Idade, @Cpf)";
+            MySqlCommand command = new MySqlCommand(criar, conexao);
             try {
                 if(pessoa.Nome == null || pessoa.Idade < 0 || pessoa.Cpf == null) {
-                    MessageBox.Show("Deu ruim, favor preencher a pessoa");
+                    MessageBox.Show("#ERROR, favor preencher a pessoa");
                 } else {
                     command.Parameters.AddWithValue("@Nome", pessoa.Nome);
                     command.Parameters.AddWithValue("@Idade", pessoa.Idade);
@@ -63,17 +63,17 @@ namespace repository
                         MessageBox.Show("Pessoa cadastrada com sucesso");
                         pessoas.Add(pessoa);
                     } else {
-                        MessageBox.Show("Deu ruim, não deu pra adicionar");
+                        MessageBox.Show("#ERROR, não foi possível adicionar");
                     }
                 }
             } catch (Exception e) {
-                MessageBox.Show("Deu ruim: " + e.Message);
+                MessageBox.Show("#ERROR: " + e.Message);
             }
-
+            
             CloseConexao();
         }
 
-        public static void UpdatePessoa(
+        public static void AlterarPessoa(
             int indice,
             string nome,
             int idade,
@@ -81,21 +81,21 @@ namespace repository
         ){
             InitConexao();
             MessageBox.Show("iniciando");
-            string query = "UPDATE pessoas SET nome = @Nome, idade = @Idade, cpf = @Cpf WHERE id = @Id";
-            MySqlCommand command = new MySqlCommand(query, conexao);
+            string alterar = "UPDATE pessoas SET nome = @Nome, idade = @Idade, cpf = @Cpf WHERE id = @Id";
+            MySqlCommand command = new MySqlCommand(alterar, conexao);
             Pessoa pessoa = pessoas[indice];
             try {
                 if(nome != null || idade > 0 || cpf != null) {
-                    command.Parameters.AddWithValue("@Id", pessoa.Id);
+                    command.Parameters.AddWithValue("@Id", pessoas[indice].Id);
                     command.Parameters.AddWithValue("@Nome", nome);
                     command.Parameters.AddWithValue("@Cpf", cpf);
                     command.Parameters.AddWithValue("@Idade", idade);
                     int rowsAffected = command.ExecuteNonQuery();
                 
                     if (rowsAffected > 0) {
-                        pessoa.Nome = nome;
-                        pessoa.Idade = idade;
-                        pessoa.Cpf = cpf;
+                        pessoas[indice].Nome = nome;
+                        pessoas[indice].Idade = idade;
+                        pessoas[indice].Cpf = cpf;
                     }
                     else {
                         MessageBox.Show(rowsAffected.ToString());

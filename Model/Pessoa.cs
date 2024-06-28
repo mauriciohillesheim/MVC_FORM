@@ -17,7 +17,7 @@ namespace model
             Idade = idade;
             Cpf = cpf;
 
-            ListPessoa.pessoas.Add(this);
+            ListPessoa.Criar(this);
         }
 
         public static void Sincronizar()
